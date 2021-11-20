@@ -108,3 +108,45 @@ nav{
 .header-btn a:hover{
     color: black;
 }
+
+.tile-wrapper{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tile{
+    
+    width: 25%;
+    padding : 1em;
+    
+    box-sizing: border-box;
+}
+
+.tile > img{
+    width: 80%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .tile{
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .tile{
+        width:50%;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    .tile{
+        
+        width: 50%;
+    }
+}
