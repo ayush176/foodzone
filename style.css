@@ -49,6 +49,7 @@ nav{
     background-color: rgba(41, 37, 37,0.8);
     justify-content: space-between;
     align-items: center;
+    position: fixed;
 }
 
 .menu a:hover{
@@ -109,8 +110,24 @@ nav{
     color: black;
 }
 
+/* products */
+
+.products{
+    width: 100%;
+    padding: 70px 0;
+    background: #c4b9b9;
+}
+
+.products > .info{
+    text-align: center;
+}
+
+.products > .info > h1{
+    font-size: 70px;
+    font-family: 'Kaushan Script', cursive;
+}
+
 .tile-wrapper{
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,22 +136,36 @@ nav{
 }
 
 .tile{
-    
     width: 25%;
     padding : 1em;
-    
     box-sizing: border-box;
 }
 
 .tile > img{
+    margin-left: 10%;
     width: 80%;
     object-fit: cover;
     border-radius: 40px;
+    transition: all ease-in 0.4s;
+}
+
+.tile img:hover{
+    opacity: 0.8;
+    transition: all ease-in 0.4s;
+    transform: translateY(-7px);
+}
+
+.tile > .capt{
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
 }
 
 @media screen and (max-width: 768px) {
     .tile{
         width:100%;
+    }
+    .menu{
+        display: none;
     }
 }
 
@@ -146,7 +177,48 @@ nav{
 
 @media screen and (min-width: 1201px){
     .tile{
-        
         width: 50%;
     }
+}
+
+/* order now */
+
+.order{
+    width: 100%;
+    padding: 70px 0;
+    background: #fdf2f2;
+}
+
+.order > .info{
+    text-align: center;
+}
+
+.order > .info > h1{
+    font-size: 70px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+form{
+    text-align: center;
+    border: 1px solid white;
+    padding : 1em;
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+form input{
+    width: 60%;
+    margin: 0.5em;
+    height: 30px;
+}
+#submit{
+    width: 20%;
+    border-radius: 2em;
+    background-color: rgb(128, 54, 115);
+    font-family : 'Kaushan Script', cursive;
+
+}
+
+form #submit:hover{
+    opacity: 0.8;
 }
